@@ -116,7 +116,7 @@ class ConcreteProductB2 implements AbstractProductB {
  * types: AbstractFactory and AbstractProduct. This lets you pass any factory or
  * product subclass to the client code without breaking it.
  */
-const clientCode = (factory: AbstractFactory) => {
+const abstractFactoryClientCode = (factory: AbstractFactory) => {
   const productA = factory.createProductA();
   const productB = factory.createProductB();
   console.log(productB.usefulFunctionB());
@@ -127,11 +127,11 @@ const clientCode = (factory: AbstractFactory) => {
  * The client code can work with any concrete factory class.
  */
 console.log("Client: Testing client code with the first factory type...");
-clientCode(new ConcreteFactory1());
+abstractFactoryClientCode(new ConcreteFactory1());
 
 console.log("");
 
 console.log(
   "Client: Testing the same client code with the second factory type..."
 );
-clientCode(new ConcreteFactory2());
+abstractFactoryClientCode(new ConcreteFactory2());
