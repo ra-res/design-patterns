@@ -40,7 +40,6 @@ class ComplexCommand implements Command {
    * Complex commands can accept one or several receiver objects along with
    * any context data via the constructor.
    */
-
   constructor(receiver: Receiver, a: string, b: string) {
     this.receiver = receiver;
     this.a = a;
