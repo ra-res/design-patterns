@@ -76,12 +76,12 @@ class ConcreteStrategyB implements Strategy {
  * client should be aware of the differences between strategies in order to make
  * the right choice.
  */
-const context = new StrategyContext(new ConcreteStrategyA());
+const strategyContext = new StrategyContext(new ConcreteStrategyA());
 console.log("Client: Strategy is set to normal sorting.");
-context.doSomeBusinessLogic();
+strategyContext.doSomeBusinessLogic();
 
 console.log("");
 
 console.log("Client: Strategy is set to reverse sorting.");
-context.setStrategy(new ConcreteStrategyB());
-context.doSomeBusinessLogic();
+strategyContext.setStrategy(new ConcreteStrategyB());
+strategyContext.doSomeBusinessLogic();
