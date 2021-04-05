@@ -74,6 +74,6 @@ class ConcreteStateB extends State {
 /**
  * The client code.
  */
-const context = new Context(new ConcreteStateA());
-context.request1();
-context.request2();
+const stateContext = new Context(new ConcreteStateA());
+stateContext.request1();
+stateContext.request2();
